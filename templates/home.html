@@ -1,0 +1,236 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vijaylaxmi Traders</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 5px 20px;
+            background: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 200px;
+            width: 180px;
+            object-fit: contain;
+        }
+
+        h1 {
+            margin: 0;
+            color: #0d47a1;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 32px;
+            color: #444;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #0d47a1;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            height: 75vh;
+            background: url("{% static 'images/home_bg.png' %}") no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 42px;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            color: white;
+        }
+
+        /* BOTTOM SECTION BUTTONS */
+        .bottom-links {
+            background: #eee;
+            padding: 15px;
+        }
+
+        .bottom-links a {
+            margin: 0 20px;
+            font-size: 22px;
+            color: #0d47a1;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* HIDDEN SECTIONS */
+        .section {
+            display: none;
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            color: #0d47a1;
+            font-size: 34px;
+        }
+
+        .section p {
+            font-size: 22px;
+            color: #333;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .section a {
+            color: #0d47a1;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Logo">
+            <h1>Vijaylaxmi Traders</h1>
+        </div>
+    </div>
+
+    <p>All Surgical & Medical Equipment Available</p>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/rental/">Rental</a>
+        <a href="/surgical/">Surgical</a>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Vijaylaxmi Traders</h2>
+            <p>Trusted Medical & Surgical Equipment Supplier</p>
+        </div>
+    </div>
+
+    <!-- BOTTOM BUTTONS -->
+    <div class="bottom-links">
+        <a onclick="toggleSection('about')">About Us</a>
+        <a onclick="toggleSection('address')">Address</a>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="section">
+        <h2>About Us</h2>
+        <p>
+            Vijaylaxmi Traders is a trusted supplier of surgical and medical equipment.
+            We provide rental and sales of hospital equipment like wheelchairs,
+            oxygen concentrators, hospital beds, surgical tools, and more at affordable prices.
+        </p>
+    </div>
+
+    <!-- ADDRESS -->
+    <div id="address" class="section">
+        <h2>Address</h2>
+        <p>
+            📍 Vijaylaxmi Traders<br>
+            Ashirwad Nagar, Krushnai Niwas,<br>
+            Solapur, Maharashtra, India
+        </p>
+
+        <p>
+            📞 Contact: +91 93253 93750
+        </p>
+
+        <p>
+            <a href="https://maps.app.goo.gl/ksP4BzKhzr7HJMhbA?g_st=aw" target="_blank">
+                View on Google Maps 📍
+            </a>
+        </p>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        function toggleSection(id) {
+            var about = document.getElementById("about");
+            var address = document.getElementById("address");
+
+            if (id === "about") {
+                if (about.style.display === "block") {
+                    about.style.display = "none";
+                } else {
+                    about.style.display = "block";
+                    address.style.display = "none";
+                }
+            }
+
+            if (id === "address") {
+                if (address.style.display === "block") {
+                    address.style.display = "none";
+                } else {
+                    address.style.display = "block";
+                    about.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

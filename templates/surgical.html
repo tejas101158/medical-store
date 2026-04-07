@@ -1,0 +1,220 @@
+{% load static %}
+{% include 'header.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surgical Equipment</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(to right, #e3f2fd, #ffffff);
+            text-align: center;
+        }
+
+        .navbar {
+            background: #0d47a1;
+            padding: 15px;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin-top: 40px;
+            color: #0d47a1;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 220px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .call-btn, .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .call-btn { background: #2e7d32; }
+        .whatsapp-btn { background: #25D366; }
+
+        .call-btn:hover { background: #1b5e20; }
+        .whatsapp-btn:hover { background: #1ebe5d; }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/rental/">Rental</a>
+    <a href="/surgical/">Surgical</a>
+</div>
+
+<h1>Surgical Equipment</h1>
+
+<div class="container">
+
+    <!-- ========================= -->
+    <!-- STATIC PRODUCTS (OLD - KEEP SAME) -->
+    <!-- ========================= -->
+
+    <div class="card">
+        <img src="{% static 'images/surgical/bandage.jpeg' %}">
+        <h3>Bandage</h3>
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/surgical/cotton_roll.jpeg' %}">
+        <h3>Cotton Roll</h3>
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/surgical/face_mask.jpeg' %}">
+        <h3>Face Mask</h3>
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/surgical/hand_sanitizer.jpeg' %}">
+        <h3>Hand Sanitizer</h3>
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/surgical/n95_mask.jpeg' %}">
+        <h3>N95 Mask</h3>
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/surgical/surgical_gloves.jpeg' %}">
+        <h3>Surgical Gloves</h3>
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/surgical/syringe.jpeg' %}">
+        <h3>Syringe</h3>
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- ========================= -->
+    <!-- NEW DYNAMIC PRODUCTS (ADMIN ADDED) -->
+    <!-- ========================= -->
+
+    {% for product in products %}
+    <div class="card">
+        <img src="{{ product.image.url }}">
+        <h3>{{ product.name }}</h3>
+
+        <div class="actions">
+            <a href="tel:9325393750" class="call-btn">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="https://wa.me/919325393750" class="whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

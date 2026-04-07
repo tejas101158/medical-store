@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+db.sqlite3
+
+# Media files (uploads)
+media/
+
+# Static collected files
+staticfiles/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/

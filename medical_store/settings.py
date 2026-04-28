@@ -30,8 +30,6 @@ INSTALLED_APPS = [
 # MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
-    # ✅ WhiteNoise (for static files on Render)
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -112,3 +110,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 # DEFAULT PRIMARY KEY
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
